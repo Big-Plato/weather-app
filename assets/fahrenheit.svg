@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" id="temperature">
+  <path fill="none" stroke="#cdcecf" stroke-linecap="round" stroke-linejoin="round" stroke-width="15" d="M490.188 256.001a234.198 234.198 0 1 1-468.396 0 234.198 234.198 0 1 1 468.396 0z"></path>
+  <g fill="#83dfff">
+    <path d="M239.982 168.942h11.607v174.114h-11.607z"></path>
+    <path d="M322.391 250.195v11.607h-82.41v-11.607zM343.759 168.942v11.607H239.982v-11.607z"></path>
+  </g>
+  <path fill="none" stroke="#83dfff" stroke-width="11.608" d="M212.423 193.959a19.214 19.214 0 1 1-38.429 0 19.214 19.214 0 1 1 38.429 0z"></path>
+</svg>
