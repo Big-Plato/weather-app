@@ -1,13 +1,17 @@
-export async function fetchData (location) {
+export async function fetchData(location) {
+  try {
+    const response = await fetch(
+      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=TSAMXVSZW5U74VLCWBLLXWCNQ&unitGroup=metric&iconSet=2`
+    );
+    return (response.json());
 
-    try {
-        const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=TSAMXVSZW5U74VLCWBLLXWCNQ`);
-            console.log(response.json());
-
-    }
-    catch (err) {
-        console.error(err);
+  } catch (err) {
+    if (err instanceof SyntaxError) {
+        console.log(`${err.name}: ${err.message}`)
+    } else {
+        throw err;
     }
     
+  }
 }
 
