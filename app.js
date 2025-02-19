@@ -41,7 +41,7 @@ function populate(fn, result) {
     createWeatherInfo(weatherInfo);
     for (let i = 1; i <= 5; i++) {
         const info = result.days[i];
-        console.log("Data " + info.datetime)
+        console.log("Info " + info)
         createWeatherInfo(info)
       }
       return weatherInfo, nextDays;
