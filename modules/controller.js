@@ -12,7 +12,6 @@ export function getData(data) {
 }
 
 export function createWeatherInfo(obj) {
-  console.log(obj)
   const divCard = createElement("div");
   divCard.classList.add("card");
   contentSection.appendChild(divCard);
@@ -54,6 +53,5 @@ function createElement(element) {
 
 const formatDate = (date) => {
   const arr = date.split("-");
-
   return `${arr[2]}/${arr[1]}/${arr[0]}`;
 }
