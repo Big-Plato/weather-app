@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const loaderCircle = loadingCircle();
     loaderCircle.classList.add("loaderCircle");
     const days = retrieveLocalStorage();
-    const city = days[0].address.split(" ");
+    const city = days[0].address.split(",");
+    console.log(city)
     fetchData(city[0].replace(",", "")).then(function (result) {
       populate(getData(result), result);
       loaderCircle.parentNode.removeChild(loaderCircle);
