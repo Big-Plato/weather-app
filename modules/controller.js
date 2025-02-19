@@ -40,7 +40,8 @@ export function createWeatherInfo(obj) {
   
   const paraAddress = createElement("p");
   divCard.appendChild(paraAddress);
-  paraAddress.innerHTML = `<p><strong>${obj.address}</strong></p>
+  const address = obj.address || formatDate(obj.datetime);
+  paraAddress.innerHTML = `<p><strong>${address}</strong></p>
   <p><span><strong>Conditions:</strong> ${obj.conditions}</span></p>
   <strong>Description:</strong><p> ${obj.description}</
   p>
@@ -50,4 +51,10 @@ export function createWeatherInfo(obj) {
 function createElement(element) {
   const name = document.createElement(element);
   return name;
+}
+
+const formatDate = (date) => {
+  const arr = date.split("-");
+
+  return `${arr[2]}/${arr[1]}/${arr[0]}`;
 }
