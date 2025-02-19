@@ -1,17 +1,20 @@
 export const contentSection = document.querySelector("#content");
 
 export function getData(data) {
-  let address = data.resolvedAddress || data.datetime;
+  let address = data.datetime || data.resolvedAddress;
+  console.log(address);
   let description = data.description;
   let conditions = data.currentConditions.conditions || data.conditions;
-  let sensationTerm = data.currentConditions.feelslike || data.feelslike;
-  let temp = data.currentConditions.temp || data.temp;
-  let icon = data.currentConditions.icon || data.icon;
+  console.log(conditions)
+  let sensationTerm =  data.feelslike || data.currentConditions.feelslike;
+  let temp = data.temp || data.currentConditions.temp;
+  let icon = data.icon || data.currentConditions.icon;
 
   return { address, description, conditions, sensationTerm, temp, icon };
 }
 
 export function createWeatherInfo(obj) {
+  console.log(obj)
   const divCard = createElement("div");
   divCard.classList.add("card");
   contentSection.appendChild(divCard);
@@ -37,10 +40,11 @@ export function createWeatherInfo(obj) {
   
   const paraAddress = createElement("p");
   divCard.appendChild(paraAddress);
-  paraAddress.innerHTML = `<strong>${obj.address}</strong>
-  <span><strong>Conditions:</strong> ${obj.conditions}</span>
-  <strong>Description:</strong> ${obj.description} \n
-  <strong>Feels like:</strong> ${obj.sensationTerm}`;
+  paraAddress.innerHTML = `<p><strong>${obj.address}</strong></p>
+  <p><span><strong>Conditions:</strong> ${obj.conditions}</span></p>
+  <strong>Description:</strong><p> ${obj.description}</
+  p>
+  <p><strong>Feels like:</strong> ${obj.sensationTerm}</p>`;
 }
 
 function createElement(element) {
