@@ -11,50 +11,47 @@ import {
 
 const search = document.querySelector("#search-text");
 const searchBtn = document.querySelector("#search-button");
-const loaderCircle = document.querySelector(".loader-circle");
 
 // Everytime the user does a search, the city is saved
 // in localStorage and when the page opens again the place
 // that was saved is retrieved
 document.addEventListener("DOMContentLoaded", () => {
-  loadingCircle(1);
+  const loaderCircle = loadingCircle();
+  loaderCircle.classList.add("loaderCircle");
   const days = retrieveLocalStorage();
   const city = days[0].address.split(" ");
-  // console.log(days)
   fetchData(city[0].replace(",", "")).then(function (result) {
-   populate(getData(result), result)
-   loadingCircle(2);
-});
+    populate(getData(result), result);
+    loaderCircle.parentNode.removeChild(loaderCircle);
+  });
 });
 
 searchBtn.addEventListener("click", () => {
+  const loaderCircle = loadingCircle();
+  loaderCircle.classList.add("loaderCircle");
   contentSection.innerHTML = "";
-  loadingCircle(1);
   fetchData(search.value).then(function (result) {
-    populate(getData(result), result)
+    populate(getData(result), result);
+    loaderCircle.parentNode.removeChild(loaderCircle);
     saveToLocalStorage(weatherInfo, nextDays);
-    loadingCircle(2);
   });
-  
 });
 
-
 function populate(fn, result) {
-    const weatherInfo = fn;
-    const nextDays = result.days;
-    console.log(nextDays)
-    createWeatherInfo(weatherInfo);
-    for (let i = 1; i <= 5; i++) {
-        const info = result.days[i];
-        createWeatherInfo(info)
-      }
-      return weatherInfo, nextDays;
+  const weatherInfo = fn;
+  const nextDays = result.days;
+  createWeatherInfo(weatherInfo);
+  for (let i = 1; i <= 5; i++) {
+    const info = result.days[i];
+    createWeatherInfo(info);
+  }
+  return weatherInfo, nextDays;
 }
 
-function loadingCircle(num) {
-    if (num === 1) {
-        loaderCircle.style.cssText = "display: block;";
-    } else {
-        loaderCircle.style.cssText = "display: none;";
-    }
-}
+const loadingCircle = () => {
+  const loaderCircle = document.createElement("div");
+  loaderCircle.classList.add("loader-circle");
+  contentSection.appendChild(loaderCircle);
+
+  return loaderCircle;
+};
