@@ -19,6 +19,7 @@ body {
   grid-template-rows: 1fr 3fr 1fr;
   height: 100vh;
   place-items: center;
+  font-size: 16px;
 }
 
 h1 {
@@ -66,18 +67,17 @@ h1 {
   gap: 10px;
   flex-wrap: wrap;
   width: 80%;
-  height: fit-content;
+  height: 100%;
 }
 
 .card {
   background-color: white;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 10px;
-  gap: 10px;
   padding: 10px;
 }
 
@@ -98,24 +98,24 @@ h1 {
   object-fit: fill;
 }
 
-.div-temp p {
-  font-size: 1.2rem;
-}
-
 .div-info > img {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
 }
 
 .card p {
   padding: 0;
   margin: 0;
-  font-size: 0.7rem;
+  font-size: 1.2rem;
 }
 
 .card {
   animation-duration: 1s;
   animation-name: changeOpacity;
+}
+
+footer {
+  margin: 30px;
 }
 
 @keyframes changeOpacity {
@@ -181,8 +181,13 @@ p {
         background-color: var(--main-content-color);
         border: 2px solid black;
     }
+    .card {
+      width: 100%;
+    }
 }
 
-.nothing {
-    display: none;
+@media (max-width: 900) {
+  .card {
+    width: 100%;
+  }
 }
