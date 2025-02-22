@@ -1,24 +1,26 @@
-<img style="margin: auto" width="335" alt="Screenshot_3" src="https://github.com/user-attachments/assets/afbce931-ca7c-4879-a46f-355dc76bcfba" />
+<p align="center">
 
-## 🗒**To-do or not to-do**
+ ![Weather App Site](https://github.com/user-attachments/assets/f69e18ae-d0d1-4e7b-b9d7-fa3ae3c8a741)
 
-A simple todo list to remind your tasks and projects.
+</p>
 
-[Live Preview](https://big-plato.github.io/to-do-list/)
+## 🗒**Whatever Weather**
+
+A simple app where you can see weather of your town.
+
+[Live Preview](https://big-plato.github.io/whatever-weather/)
 
 ## 👉**Introduction**
 
-This app was a project made for the course of JavaScript by The Odin Project. An app that one will be able to use as one might like to create projects and put todos inside these projects.
+This app was a project made for the course of JavaScript by <a href="https://www.theodinproject.com/lessons/node-path-javascript-weather-app">The Odin Project</a>. An app that one will be able to use as one might like to see the weather in a location from today to six days after.
 
 ## 💻**Installation**
 
-To install Project Title, follow these steps:
+To use Whatever Weather, follow these steps:
 
-1. Clone the repository: **`git clone https://github.com/username/project-title.git`**
-2. Navigate to the project directory: **`cd project-title`**
-3. Install dependencies: **`npm install`**
-4. Build the project: **`npm run build`**
-5. Start the project: **`npm run dev`**
+1. Clone the repository: **`git clone https://github.com/BigPlato/weather-app.git`**
+2. Navigate to the project directory: **`cd weather-app`**
+3. Run in code editor of your preference.
 
 ## 🛠 **Built with**
 ![HTML](https://img.shields.io/badge/_-HTML-E34C26.svg?style=for-the-badge)
@@ -27,24 +29,13 @@ To install Project Title, follow these steps:
 
 ## 🔩**Tools**
 <div style="display: flex">
-<img src="https://img.shields.io/badge/webpack-orange?style=plastic&logo=webpack"/>
-<img src="https://img.shields.io/badge/npm-black?style=plastic&logo=npm"/>
+1. LocalStorage WEB API
+2. Visual Crossing Weather API
 </div>
-
-
-## ▶**Usage**
-
-To use Project Title, follow these steps:
-
-1. Open the project in your favorite code editor.
-2. Modify the source code to fit your needs.
-3. Build the project: **`npm run build`**
-4. Start the project: **`npm run dev`**
-5. Use the project as desired.
 
 ## 🧑‍🤝‍🧑**Contributing**
 
-If you'd like to contribute to 'To-do or not to-do', here are some guidelines:
+If you'd like to contribute to 'whatever-weather', here are some guidelines:
 
 1. Fork the repository.
 2. Create a new branch for your changes.
@@ -57,11 +48,11 @@ If you'd like to contribute to 'To-do or not to-do', here are some guidelines:
 
 ## 📖**License**
 
-Project Title is released under the MIT License. See the **[LICENSE](https://www.blackbox.ai/share/LICENSE)** file for details.
+Whatever Weather is released under the MIT License. See the **[LICENSE](https://www.blackbox.ai/share/LICENSE)** file for details.
 
 ## 🙋**Authors and Acknowledgment**
 
-To-do or not to-do was created by **[Luis Octávio](https://github.com/Big-Plato)**.
+Whatever Weather was created by **[Luis Octávio](https://github.com/Big-Plato)**.
 
 <!--
 Additional contributors include:
