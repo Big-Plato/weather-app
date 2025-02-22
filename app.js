@@ -20,12 +20,21 @@ const searchBtn = document.querySelector("#search-button");
 document.addEventListener("DOMContentLoaded", () => {
   if (localStorage.length > 0) {
     const loaderCircle = loadingCircle();
+<<<<<<< HEAD
     loaderCircle.putCircle();
+=======
+    const loaderCircle = loadingCircle();
+    console.log(loaderCircle)
+    loaderCircle.putCircle();
+>>>>>>> c5aeac5 (fix: loading circle animation now works)
     const days = retrieveLocalStorage();
     const city = days[0].address.split(",");
     fetchData(city[0].replace(",", "")).then((result) => {
       populate(getData(result), result);
+<<<<<<< HEAD
       loaderCircle.removeCircle();
+=======
+>>>>>>> c5aeac5 (fix: loading circle animation now works)
     });
   } else {
     const loaderCircle = loadingCircle();
@@ -47,6 +56,7 @@ searchBtn.addEventListener("click", () => {
     const nextDays = result.days;
     populate(getData(result), result);
     loaderCircle.removeCircle();
+    loaderCircle.removeCircle();
     saveToLocalStorage(current, nextDays);
     loaderCircle.removeCircle();
   });
@@ -63,6 +73,23 @@ function populate(fn, result) {
   return [weatherInfo, nextDays];
 }
 
+<<<<<<< HEAD
+=======
+const loadingCircle = () => {
+  const loaderCircle = document.createElement("div");
+  const putCircle = () => {
+    loaderCircle.classList.add("loader-circle");
+    contentSection.appendChild(loaderCircle);
+  }
+
+  const removeCircle = () => {
+    loaderCircle.hidden = true;
+    loaderCircle.remove();
+  }
+
+  return { loaderCircle, putCircle, removeCircle };
+};
+>>>>>>> c5aeac5 (fix: loading circle animation now works)
 const loadingCircle = () => {
   const loaderCircle = document.createElement("div");
   const putCircle = () => {
