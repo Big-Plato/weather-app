@@ -71,14 +71,16 @@ h1 {
 }
 
 .card {
+  margin-bottom: 10px;
   background-color: white;
-  width: 300px;
+  width: 50%;
   height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   border-radius: 10px;
-  padding: 10px;
+  padding: 20px;
+  flex: 1;
 }
 
 .div-info {
@@ -106,7 +108,7 @@ h1 {
 .card p {
   padding: 0;
   margin: 0;
-  font-size: 1.2rem;
+  font-size: auto;
 }
 
 .card {
