@@ -6,7 +6,7 @@
 
 ## 🗒**Whatever Weather**
 
-A simple app where you can see weather of your town.
+A simple app where you can see the weather for the week of your town.
 
 [Live Preview](https://big-plato.github.io/whatever-weather/)
 
